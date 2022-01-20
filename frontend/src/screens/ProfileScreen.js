@@ -7,6 +7,7 @@ import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { getUserDetails, updateUserProfile } from '../actions/userActions';
 import { listMyOrders } from '../actions/orderActions';
+import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -33,16 +34,13 @@ const ProfileScreen = () => {
 
   useEffect(() => {
     if (!userInfo) {
-      console.log('Now the user info is empty');
       navigate('/login');
     } else {
-      console.log('UserInfo is not empty');
       if (!user || !user.name || success) {
-        console.log('dispatch');
+        dispatch({ type: USER_UPDATE_PROFILE_RESET });
         dispatch(getUserDetails('profile'));
         dispatch(listMyOrders());
       } else {
-        console.log('nothing else');
         setName(user.name);
         setEmail(user.email);
       }
