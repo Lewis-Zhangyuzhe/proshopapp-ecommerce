@@ -3,6 +3,8 @@
 > eCommerce platform built with the MERN stack & Redux.
 > This is the course project for my MERN eCommerce course
 
+![screenshot](/uploads/Screen%20Shot%202022-01-19%20at%2017.28.23.png)
+
 ## Key Points on the resume
 
 - Built a custom eCommerce platform with React, Redux, Node, Express & MongoDB
