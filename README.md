@@ -79,6 +79,16 @@ npm run build
 
 There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
 
+## Synchronize to github & heroku git store
+
+- github: git push origin master
+- heroku: git push heroku master
+
+## Other resources
+
+- Postman: test the backend api
+- MongoDN compass: manage the data in mongoDB database locally
+
 ### Seed Database
 
 You can use the following commands to seed the database with some sample users and products as well as destroy all data
